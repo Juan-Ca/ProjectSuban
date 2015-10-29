@@ -1,3 +1,5 @@
+namespace model;
+
 class League{
   singleton;
   1 -> * Player players;
@@ -46,9 +48,7 @@ class Team{
 
 
 class Infraction{
-  boolean redCard;
-  boolean yellowCard;
-  boolean penaltyKick;
+  type;
   1 -> 1 Player player;
 }//$?[End_of_model]$?
 

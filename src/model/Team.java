@@ -1,13 +1,11 @@
-package model;
-
 /*PLEASE DO NOT EDIT THIS CODE*/
 /*This code was generated using the UMPLE 1.22.0.5146 modeling language!*/
 
-
+package model;
 import java.util.*;
 
-// line 36 "model.ump"
-// line 85 "model.ump"
+// line 38 "../model.ump"
+// line 85 "../model.ump"
 public class Team
 {
 

@@ -1,12 +1,10 @@
-package model;
-
 /*PLEASE DO NOT EDIT THIS CODE*/
 /*This code was generated using the UMPLE 1.22.0.5146 modeling language!*/
 
+package model;
 
-
-// line 48 "model.ump"
-// line 92 "model.ump"
+// line 50 "../model.ump"
+// line 92 "../model.ump"
 public class Infraction
 {
 
@@ -15,9 +13,7 @@ public class Infraction
   //------------------------
 
   //Infraction Attributes
-  private boolean redCard;
-  private boolean yellowCard;
-  private boolean penaltyKick;
+  private String type;
 
   //Infraction Associations
   private Player player;
@@ -26,11 +22,9 @@ public class Infraction
   // CONSTRUCTOR
   //------------------------
 
-  public Infraction(boolean aRedCard, boolean aYellowCard, boolean aPenaltyKick, Player aPlayer)
+  public Infraction(String aType, Player aPlayer)
   {
-    redCard = aRedCard;
-    yellowCard = aYellowCard;
-    penaltyKick = aPenaltyKick;
+    type = aType;
     if (!setPlayer(aPlayer))
     {
       throw new RuntimeException("Unable to create Infraction due to aPlayer");
@@ -41,43 +35,17 @@ public class Infraction
   // INTERFACE
   //------------------------
 
-  public boolean setRedCard(boolean aRedCard)
+  public boolean setType(String aType)
   {
     boolean wasSet = false;
-    redCard = aRedCard;
+    type = aType;
     wasSet = true;
     return wasSet;
   }
 
-  public boolean setYellowCard(boolean aYellowCard)
+  public String getType()
   {
-    boolean wasSet = false;
-    yellowCard = aYellowCard;
-    wasSet = true;
-    return wasSet;
-  }
-
-  public boolean setPenaltyKick(boolean aPenaltyKick)
-  {
-    boolean wasSet = false;
-    penaltyKick = aPenaltyKick;
-    wasSet = true;
-    return wasSet;
-  }
-
-  public boolean getRedCard()
-  {
-    return redCard;
-  }
-
-  public boolean getYellowCard()
-  {
-    return yellowCard;
-  }
-
-  public boolean getPenaltyKick()
-  {
-    return penaltyKick;
+    return type;
   }
 
   public Player getPlayer()
@@ -106,9 +74,7 @@ public class Infraction
   {
 	  String outputString = "";
     return super.toString() + "["+
-            "redCard" + ":" + getRedCard()+ "," +
-            "yellowCard" + ":" + getYellowCard()+ "," +
-            "penaltyKick" + ":" + getPenaltyKick()+ "]" + System.getProperties().getProperty("line.separator") +
+            "type" + ":" + getType()+ "]" + System.getProperties().getProperty("line.separator") +
             "  " + "player = "+(getPlayer()!=null?Integer.toHexString(System.identityHashCode(getPlayer())):"null")
      + outputString;
   }

@@ -1,13 +1,11 @@
-package model;
-
 /*PLEASE DO NOT EDIT THIS CODE*/
 /*This code was generated using the UMPLE 1.22.0.5146 modeling language!*/
 
-
+package model;
 import java.util.*;
 
-// line 17 "model.ump"
-// line 69 "model.ump"
+// line 19 "../model.ump"
+// line 69 "../model.ump"
 public class Game
 {
 

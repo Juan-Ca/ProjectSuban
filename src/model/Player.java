@@ -1,12 +1,10 @@
-package model;
-
 /*PLEASE DO NOT EDIT THIS CODE*/
 /*This code was generated using the UMPLE 1.22.0.5146 modeling language!*/
 
+package model;
 
-
-// line 8 "model.ump"
-// line 63 "model.ump"
+// line 10 "../model.ump"
+// line 63 "../model.ump"
 public class Player
 {
 

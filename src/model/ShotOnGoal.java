@@ -1,12 +1,10 @@
-package model;
-
 /*PLEASE DO NOT EDIT THIS CODE*/
 /*This code was generated using the UMPLE 1.22.0.5146 modeling language!*/
 
+package model;
 
-
-// line 30 "model.ump"
-// line 79 "model.ump"
+// line 32 "../model.ump"
+// line 79 "../model.ump"
 public class ShotOnGoal
 {
 
