@@ -1,0 +1,96 @@
+class League{
+  singleton;
+  1 -> * Player players;
+  1 -> * Team teams;
+  1 -> * Game games;
+}
+
+class Player{
+  autounique id;
+  name;
+  int number;
+  int shotsOnGoal;
+  int goals;
+  int penalties;
+}
+
+class Game{
+    int team0Score;
+    int team1Score; 
+    boolean isOver;
+    boolean isDraw;
+    boolean isUpdated;
+    int winner;
+    1 -> * ShotOnGoal shotsOnGoal;
+    1 -> * Infraction infractions;
+    1 -> 2 Team teams;
+
+}
+
+class ShotOnGoal{
+  boolean goal;
+  1 -> 1 Player suban;
+  
+}
+
+class Team{
+  autounique id;
+  name;
+  int wins;
+  int losses;
+  int draws;
+  int points;
+  int rank;
+  1 -> * Player players;
+}
+
+
+class Infraction{
+  boolean redCard;
+  boolean yellowCard;
+  boolean penaltyKick;
+  1 -> 1 Player player;
+}//$?[End_of_model]$?
+
+class League
+{
+  position 50 30 109 45;
+  position.association Game:games__League 110,11 0,10;
+  position.association Game:currentGame__League 110,31 0,30;
+  position.association League__Player:players 110,12 0,10;
+}
+
+class Player
+{
+  position 334 437 135 143;
+  position.association Player__Team:team 0,103 132,33;
+}
+
+class Game
+{
+  position 316 101 153 142;
+  position.association Game__Infraction:infractions 154,11 0,10;
+  position.association Game__Team:teams 100,142 30,0;
+  position.association Game__ShotOnGoal:team0Shots 134,86 30,0;
+  position.association Game__ShotOnGoal:team1Shots 134,75 60,0;
+  position.association Game__ShotOnGoal:shotsOnGoal 48,142 30,0;
+}
+
+class ShotOnGoal
+{
+  position 684 559 116 75;
+  position.association Player:suban__ShotOnGoal 0,10 136,11;
+}
+
+class Team
+{
+  position 48 427 132 160;
+  position.association Player:players__Team 132,25 0,98;
+  position.association Game:games__Team 60,0 102,126;
+}
+
+class Infraction
+{
+  position 650 167 164 109;
+  position.association Infraction__Player:player 0,10 136,8;
+}
